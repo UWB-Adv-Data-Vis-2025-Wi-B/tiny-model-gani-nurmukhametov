@@ -76,7 +76,6 @@ ggplot(crickets, aes(x = rate, fill = species)) +
   xlab('Chirp rate (per min.)')
 ```
 
-````
 ```{r interactions, echo= FALSE}
 ggplot(crickets, aes(x = temp, y = rate, color = species)) +
   geom_point() + 
@@ -89,4 +88,12 @@ species_x_temp_lm <- lm(rate ~ temp + species + temp:species, crickets)
 summary.lm(species_x_temp_lm)
 
 anova(species_lm, species_x_temp_lm)
+```
+
+## Visualize and model diamond prices
+
+```{r load diamonsa data, include = FALSE}
+data(diamonds, package = "ggplot2")
+names(diamonds)
+```
 ```
