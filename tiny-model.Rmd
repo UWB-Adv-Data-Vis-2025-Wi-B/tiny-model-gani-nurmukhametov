@@ -25,4 +25,11 @@ In this report, we examine what factors predict a cricket's chirp rate.
 
 ```{r summary, echo = FALSE}
 summary(crickets)
-``` 
+ggplot(crickets, aes(x = rate)) +
+  geom_histogram(bins = 8) + 
+  ggtitle("Distribution of the chirp rate of crickets") +
+  xlab('Chirp rate (per min.)')
+```
+
+The number of observations is 31, there are two species of crickets in dataset (14 observations and 17 observations).
+The temperature range is 13.2 (=30.4-17.2), the mean rate of chirping is 72.89.
